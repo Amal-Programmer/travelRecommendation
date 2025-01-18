@@ -8,7 +8,8 @@ const clrSearch = document.getElementById("clrSearch");
 function search(){
 
     searchResult.innerHTML="";
-    const value = recommendations.value.toLowerCase();
+    let value = recommendations.value.toLowerCase();
+    if(value==="country") {value="countries";}
     console.log(value, typeof(value));
     if(value!==""){
     fetch('travel_recommendation_api.json')
@@ -24,7 +25,9 @@ function search(){
                     searchResult.innerHTML += `<div class="searchResult">
                     <img src="${data[key][i].imageUrl}" alt="hjh">
                     <p> ${data[key][i].name} </p>
-                    <p> ${data[key][i].description} </p></div>`
+                    <p> ${data[key][i].description} </p>
+                    <button>Visit</button>
+                    </div>`
 
                     }else{
                         console.log(data[key][i].cities);
@@ -33,7 +36,9 @@ function search(){
                         searchResult.innerHTML += `<div class="searchResult"> 
                         <img src="${data[key][i].cities[j].imageUrl}" alt="hjh">
                         <p> ${data[key][i].cities[j].name} </p>
-                        <p> ${data[key][i].cities[j].description} </p></div>`
+                        <p> ${data[key][i].cities[j].description} </p>
+                        <button>Visit</button>
+                        </div>`
                     };
                     }
                     }
