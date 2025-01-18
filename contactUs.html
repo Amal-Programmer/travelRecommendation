@@ -15,10 +15,8 @@
   <a href="./aboutUs.html" id="about">About us </a></li>
   <a href="./contactUs.html" id="contact">Contact Us </a></li>
   </div>
-  <div class="SearchRecommendation">
-  <input type="text" id="recommendations" placeholder="Enter a destination or keyword"> 
-  <button id='btnSearch'>Search</button>
-  <button id='clrSearch'>Clear</button>
+  <div class="Space">
+
   </div>  
 
 </nav>
@@ -39,16 +37,28 @@
               <i class="fab fa-youtube"></i>
             </a>
         </div>
-<div class="Info">
- <p style="font-size: 65px;">EXPLORE DREAM DESTINATION</p> 
- <p class="Details">It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
- <button id="book">BOOK NOW</button> 
+<div class="Contact">
+    <div>
+       <p style="font-size: 65px;">CONTACT US</p> 
+       <p>Get in contact with us</p>
+    </div>
+
+    <div class="Details">
+        <form id="contactForm">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" placeholder="Enter your name"><br><br>
+        <label for="email">Email</label><br>
+        <input type="text" id="email" placeholder="Enter your email"><br><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" rows="5" cols="23" placeholder="Enter your message"></textarea><br><br>
+        <button>Submit</button>
+        </form>
+    </div>
 </div>
-<div id="searchResult" class="searchResultContainer">
+</div>
+
 
 </div>
-
-</div>
-<script src="./travel_recommendation.js"></script>
+<script src="./health_analysis.js"></script>
 </body>
 </html>
